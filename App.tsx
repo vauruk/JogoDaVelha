@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
 const Position = ({ value, onPress }) => {
   return (
     <View style={styles.col}>
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity onPress={onPress} style={styles.bottonChange}>
         <View>
           <Text style={styles.textPos}>{value}</Text>
         </View>
@@ -107,7 +107,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   col: {
-    flex: 0.33,
+    flex: 1,
     alignItems: 'center',
     alignContent: 'center',
     justifyContent: 'center',
@@ -151,6 +151,14 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     paddingBottom: 20,
+  },
+  bottonChange: {
+    height: '100%',
+    width: '100%',
+    flex: 1,
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
   },
 });
 
